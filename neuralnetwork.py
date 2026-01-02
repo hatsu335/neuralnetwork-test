@@ -3,7 +3,7 @@ import gzip
 import struct
 import os
 import time
-from typing import cast #
+from typing import cast    # VSCodeでの警告対策(castは無くても問題なく起動する)
 
 # ユーティリティ関数
 
@@ -31,7 +31,7 @@ def targets_file(filename):
         labels = np.frombuffer(label_data, dtype=np.uint8)
         return np.asarray(labels)
 
-# NeralNetwork本体
+# NeuralNetwork本体
 
 class NeuralNetwork(object):
     def __init__(self, inputnodes, hiddennodes, outputnodes, learningrate):
